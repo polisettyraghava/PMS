@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.ConsoleData_Display_Excel.PMS_Login2">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ConsoleData_Display_Excel.PMS_Login2 -->
+      <class name="com.ConsoleData_Display_Excel.PMS_Login">
+        <methods>
+          <include name="teardown"/>
+          <include name="Login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ConsoleData_Display_Excel.PMS_Login -->
+      <class name="com.ConsoleData_Display_Excel.Newtours_Register_Countrynames">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ConsoleData_Display_Excel.Newtours_Register_Countrynames -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,10 @@
+package newPMS;
+
+public class DirectoryPage 
+{
+	
+	private Object Login_PMS;
+	Login_PMS log = new Login_PMS(Login_PMS);
+	
+
+}

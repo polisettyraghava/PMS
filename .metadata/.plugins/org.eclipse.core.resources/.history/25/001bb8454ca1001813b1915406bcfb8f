@@ -1,0 +1,77 @@
+package newPMS;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.server.browserlaunchers.Sleeper;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+public class DirectoryPage extends Login_PMS
+{
+	
+	FirefoxDriver driver;
+
+	@Test(priority=2)
+	
+    public void Department() 
+    {
+    	Sleeper.sleepTightInSeconds(6);
+		WebElement department=driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/nav/div[2]/div/div[1]/div/ul/li[2]/a/span[1]/i"));
+		department.click();
+		String ExpectedTitle="Patient Management System | IKHYA";
+	    String ActualTitle=driver.getTitle();
+       System.out.println("Expected Title is:" +ExpectedTitle);
+       System.out.println("Actual Title is:" +ActualTitle);
+       if(ActualTitle.equals(ExpectedTitle))
+		{
+			System.out.println("Title Matched -- PASS");
+		}
+		else
+		{
+			System.out.println("Title not matched -- FAIL");
+		}
+       Sleeper.sleepTightInSeconds(6);
+       
+    }
+	
+    @Test(priority=3)
+    public void Adddata() 
+    {
+    	WebElement AddDepartment = driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div/a/span"));
+	    AddDepartment.click();
+	    System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+	    System.out.println("Add Department page is opened");
+	    
+	       Sleeper.sleepTightInSeconds(4);
+        
+			WebElement depdata=driver.findElement(By.id("department_name"));
+			depdata.sendKeys("Test Dept");
+			WebElement textdesc=driver.findElement(By.id("department_description"));
+			textdesc.sendKeys("test data description");
+			WebElement stype=driver.findElement(By.id("status"));
+			Select statustype= new Select(stype);
+			statustype.selectByVisibleText("Active");
+			WebElement addst=driver.findElement(By.xpath("html/body/div[1]/div[2]/div/div/div/div/div/div/div/div/div[2]/div/div[1]/div/div/form/button"));
+			addst.click();
+			System.out.println("data is inserted");
+		       Sleeper.sleepTightInSeconds(4);
+		       
+		       
+			
+    }
+    
+    @AfterTest
+    public void teardown() {
+    	driver.close();
+    }
+}
+DirectoryPage directory = new DirectoryPage();
+directory.login(); //returns 1
+
+
+	
+
+

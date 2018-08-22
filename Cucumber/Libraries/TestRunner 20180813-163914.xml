@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="Cucumber" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.Facebook_Login.TestRunner" time="0.0">
+    <testsuite name="Feature: Test Facebook Smoke Scenario" time="0.0">
+      <testcase name="Scenario: Test login with valid credentials" classname="Scenario: Test login with valid credentials" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>

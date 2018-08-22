@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PMS_LoginData.xlsx&apos; to &apos;Practise/src&apos;&#x0D;&#x0A;- Original project: &apos;PMS&apos;&#x0D;&#x0A;- Destination element: &apos;Practise/src&apos;&#x0D;&#x0A;- Original element: &apos;PMS_LoginData.xlsx&apos;" description="Copy file" destination="=Practise/src" element1="src/PMS_ExcelData/PMS_LoginData.xlsx" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1534846185544" units="0" version="1.0"/>
+</session>

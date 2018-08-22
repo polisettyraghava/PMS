@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Raghava/Downloads/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-examples-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Projects/Com.Validations/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Raghava/Downloads/selenium-server-standalone-2.53.0 (1).jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

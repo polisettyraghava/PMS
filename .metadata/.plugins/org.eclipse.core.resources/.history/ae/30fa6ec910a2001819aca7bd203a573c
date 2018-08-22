@@ -1,0 +1,15 @@
+package newPMS;
+
+public class SpecialityPage extends Login_PMS
+{
+	public static void main(String args[])
+	{
+		Login_PMS directory = new Login_PMS();
+		directory.login();	
+	}
+
+	
+	
+
+}
+

@@ -1,0 +1,6 @@
+#Fri Jul 06 14:36:33 IST 2018
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=//*[@id\="wrapper"]/footer/div[1]/div/div[1]/div[1]/div/h5

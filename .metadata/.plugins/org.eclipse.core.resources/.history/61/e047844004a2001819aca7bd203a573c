@@ -1,0 +1,110 @@
+package newPMS;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.server.browserlaunchers.Sleeper;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+
+
+public class DepartmentPage extends Login_PMS
+{
+	public static void main(String args[]) {
+		Login_PMS directory = new Login_PMS();
+		directory.login();	
+	}
+	
+
+	@Test(priority=1)
+	
+    public void Department() 
+    {
+    	Sleeper.sleepTightInSeconds(6);
+		WebElement department=driver.findElement(By.xpath("html/body/div[1]/aside/section/ul/li/ul/li[3]/a/span[1]/i"));
+		department.click();
+		String ExpectedTitle="Patient Management System | IKHYA";
+	    String ActualTitle=driver.getTitle();
+       System.out.println("Expected Title is:" +ExpectedTitle);
+       System.out.println("Actual Title is:" +ActualTitle);
+       if(ActualTitle.equals(ExpectedTitle))
+		{
+			System.out.println("Title Matched -- PASS");
+		}
+		else
+		{
+			System.out.println("Title not matched -- FAIL");
+		}
+       Sleeper.sleepTightInSeconds(6);
+       
+    }
+	
+    @Test(priority=2)
+    public void Adddata() 
+    {
+    	WebElement AddDepartment = driver.findElement(By.linkText("Add Department"));
+	    AddDepartment.click();
+	    System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+	    System.out.println("Add Department page is opened");
+	    
+	       Sleeper.sleepTightInSeconds(4);
+        
+			WebElement depdata=driver.findElement(By.id("department_name"));
+			depdata.sendKeys("TestDe");
+			WebElement textdesc=driver.findElement(By.id("department_description"));
+			textdesc.sendKeys("testdatadescription");
+			WebElement stype=driver.findElement(By.id("status"));
+			Select statustype= new Select(stype);
+			statustype.selectByVisibleText("Active");
+			WebElement addst=driver.findElement(By.name("add"));
+			addst.click();
+			System.out.println("data is inserted");
+			
+			String Expected_Url="pms";
+			String Actual_Url=driver.getCurrentUrl();
+			System.out.println("Expected_Url is:" + Expected_Url);
+			System.out.println("Actual_Url is:" + Actual_Url);
+			
+			if(Actual_Url.contains(Expected_Url))
+			{
+				System.out.println("Url Matched - PASS");
+
+			}
+			else
+			{
+				System.out.println("Url Failed - Fail");
+
+			}
+		       Sleeper.sleepTightInSeconds(4);      
+			
+    }
+    
+    @Test(priority=3)
+    public void EditDepartment()
+    {
+    	WebElement edit=driver.findElement(By.xpath("html/body/div[1]/div/section[2]/form/div/div/div[2]/div/table/tbody/tr[2]/td[6]/a[1]"));
+    	edit.click();
+    	WebElement desc=driver.findElement(By.id("department_description"));
+    	desc.sendKeys("update");
+    	WebElement stype=driver.findElement(By.id("status"));
+		Select statustype= new Select(stype);
+		statustype.selectByVisibleText("Active");
+		WebElement updt=driver.findElementByName("update");
+		updt.click();
+		System.out.println(driver.getCurrentUrl());
+    	
+    }
+    
+    @AfterTest
+    public void tearDown() {
+    	driver.close();
+    }
+}
+ 
+
+
+	
+
+

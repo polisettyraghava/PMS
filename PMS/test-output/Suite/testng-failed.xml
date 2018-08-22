@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="newPMS.DepartmentPage">
+        <methods>
+          <include name="Adddata"/>
+          <include name="login"/>
+          <include name="Department"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- newPMS.DepartmentPage -->
+      <class name="newPMS.SpecialityPage">
+        <methods>
+          <include name="Speciality"/>
+          <include name="login"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- newPMS.SpecialityPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
